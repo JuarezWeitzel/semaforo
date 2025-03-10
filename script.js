@@ -1,29 +1,47 @@
-function redLight() {
-    red.classList.add("red-light");
-    yellow.classList.remove("yellow-light");
-    green.classList.remove("green-light");
+let interval;
 
-    // Após 5 segundos, muda para o verde
-    setTimeout(greenLight, 5000);
+function startCounter(element, seconds, callback) {
+  let remainingTime = seconds;
+  let counter = element.querySelector(".counter");
+  counter.textContent = remainingTime;
+
+  interval = setInterval(() => {
+    remainingTime--;
+    counter.textContent = remainingTime;
+
+    if (remainingTime <= 0) {
+      clearInterval(interval);
+      counter.textContent = "";
+      callback();
+    }
+  }, 1000);
+}
+
+function redLight() {
+  red.classList.add("red-light");
+  yellow.classList.remove("yellow-light");
+  green.classList.remove("green-light");
+
+  // Contador no vermelho
+  startCounter(red, 15, greenLight);
 }
 
 function yellowLight() {
-    red.classList.remove("red-light");
-    yellow.classList.add("yellow-light");
-    green.classList.remove("green-light");
+  red.classList.remove("red-light");
+  yellow.classList.add("yellow-light");
+  green.classList.remove("green-light");
 
-    // Após 2 segundos, muda para o vermelho
-    setTimeout(redLight, 2000);
+  // Contador no amarelo
+  startCounter(yellow, 4, redLight);
 }
 
 function greenLight() {
-    red.classList.remove("red-light");
-    yellow.classList.remove("yellow-light");
-    green.classList.add("green-light");
+  red.classList.remove("red-light");
+  yellow.classList.remove("yellow-light");
+  green.classList.add("green-light");
 
-    // Após 5 segundos, muda para o amarelo
-    setTimeout(yellowLight, 5000);
+  // Contador no verde
+  startCounter(green, 10, yellowLight);
 }
 
-// Inicia o ciclo com o vermelho
 redLight();
