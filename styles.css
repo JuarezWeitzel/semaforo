@@ -33,6 +33,13 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+.counter {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  display: none;
+}
+
 .red,
 .yellow,
 .green {
@@ -69,4 +76,22 @@ body {
 
 .green-light {
   background-color: rgba(0, 128, 0, 0.7);
+}
+
+.red-light .counter,
+.yellow-light .counter,
+.green-light .counter {
+  display: block;
+}
+
+.red-light .counter {
+  color: rgb(255, 0, 0);
+}
+
+.yellow-light .counter {
+  color: rgb(255, 255, 0);
+}
+
+.green-light .counter {
+  color: rgb(0, 128, 0);
 }
