@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel de Controle</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Formulário de controle de tempo -->
+    <div class="control-panel">
+      <h2>Controle de Tempo do Semáforo</h2>
+      <form id="time-control-form">
+        <label for="red-time">Tempo Vermelho (segundos):</label>
+        <input 
+        type="number" 
+        id="redTime" 
+        name="red-time" 
+        min="1" 
+        required />
+
+        <label for="yellow-time">Tempo Amarelo (segundos):</label>
+        <input
+          type="number"
+          id="yellowTime"
+          name="yellow-time"
+          min="1"
+          required
+        />
+
+        <label for="green-time">Tempo Verde (segundos):</label>
+        <input
+          type="number"
+          id="greenTime"
+          name="green-time"
+          min="1"
+          required
+        />
+
+        <button type="submit" class="control-panel-button">Aplicar Tempos</button>
+
+        <a href="index.html" class="control-panel-button">Voltar</a>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
