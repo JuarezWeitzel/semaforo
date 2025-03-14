@@ -12,6 +12,24 @@ O projeto consiste em um semáforo interativo que alterna entre as cores vermelh
 - **Cores com Transparência**: O contador herda a cor da luz ativa com um efeito de transparência, criando um visual harmonioso.
 - **Transições Suaves**: As mudanças de cor e a exibição do contador são feitas com transições suaves, melhorando a experiência do usuário.
 - **Código Modular**: O JavaScript foi estruturado de forma modular, facilitando a manutenção e a adição de novas funcionalidades.
+- **Painel de Controle**: Adicionada uma página de controle para ajustar os tempos de cada luz do semáforo.
+- **Estilização Aprimorada**: Melhorias no layout e na usabilidade do painel de controle, com estilos responsivos e botões interativos.
+
+## Novas Atualizações
+
+- **Painel de Controle**:
+  - Adicionada a página `panelControl.html` para permitir que o usuário defina os tempos de cada luz do semáforo.
+  - Os tempos são armazenados no `localStorage` e aplicados ao semáforo automaticamente.
+  - Botões estilizados para uma melhor experiência do usuário.
+- **Estilização**:
+  - Ajustes no layout do painel de controle, incluindo `flex-direction: column`, `gap: 10px` e `width: 160px`.
+  - Novos estilos para o painel de controle:
+    - Margem, padding, bordas arredondadas e sombra.
+    - Estilos para títulos, labels e inputs.
+    - Botões com efeito hover e bordas arredondadas.
+- **Lógica Aprimorada**:
+  - Verificação da página atual para executar código específico (`panelControl.html` ou `index.html`).
+  - Redirecionamento automático para a página do semáforo após salvar os tempos.
 
 ## Tecnologias Utilizadas
 
@@ -20,9 +38,11 @@ O projeto consiste em um semáforo interativo que alterna entre as cores vermelh
 - **JavaScript**: Lógica para controle do semáforo e contador dinâmico.
 
 ## Estrutura do Projeto
+
 - **index.html**: Estrutura HTML do semáforo.
-- **styles.css**: Estilos CSS para o semáforo e contador.
-- **script.js**: Lógica JavaScript para controle do semáforo e contador.
+- **panelControl.html**: Página de controle para ajustar os tempos do semáforo.
+- **styles.css**: Estilos CSS para o semáforo, contador e painel de controle.
+- **script.js**: Lógica JavaScript para controle do semáforo, contador e painel de controle.
 
 ## Funcionalidades
 
@@ -30,6 +50,8 @@ O projeto consiste em um semáforo interativo que alterna entre as cores vermelh
 - Contador dinâmico que aparece no centro da luz ativa.
 - Transições suaves entre as cores e o contador.
 - Cores do contador com transparência, correspondentes à luz ativa.
+- Painel de controle para ajustar os tempos de cada luz.
+- Redirecionamento automático entre as páginas.
 
 ## Contribuição
 
